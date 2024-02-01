@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  postgres-java-security:
+    image: postgres
+    container_name: postgres-java-security
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 102030
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
